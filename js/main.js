@@ -54,3 +54,60 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+
+//  contact me validation
+document.addEventListener("DOMContentLoaded", function () {
+    const contactForm = document.getElementById("contactForm");
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const messageInput = document.getElementById("message");
+    const submitButton = document.getElementById("submitButton");
+    const errorOutput = document.getElementById("errorOutput");
+
+    submitButton.addEventListener("click", function () {
+
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
+        const message = messageInput.value.trim();
+
+        // Check if any field is empty
+        if (!name || !email || !message) {
+            errorOutput.innerHTML = "Please fill in all fields.";
+            return;
+        }
+
+        // Validate the email format using a regular expression
+        const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+        if (!emailRegex.test(email)) {
+            errorOutput.innerHTML = "Invalid email format.";
+            return;
+        }
+
+        // Clear any previous error messages
+        errorOutput.innerHTML = "";
+
+        // Send the data to the server for email sending
+        fetch('/sendEmail', { 
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, email, message }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Handle success (e.g., show a success message)
+                console.log("Email sent successfully.");
+            } else {
+                // Handle errors
+                errorOutput.innerHTML = "Error sending the email. Please try again later.";
+            }
+        })
+        .catch(error => {
+            // Handle any other errors
+            console.error(error);
+        });
+    });
+});
+
