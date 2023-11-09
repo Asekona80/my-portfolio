@@ -345,74 +345,33 @@ img {
   border-radius: .5rem;
 }
 
-/* ===== WORK =====*/
-
+/* PROJECTS SECTION */
 #projects {
-  text-align: center;
-  padding: 50px 0;
+  position: relative;
 }
 
-.section__text__p1 {
-  font-size: 18px;
-  color: #333;
-}
-
-.title {
-  font-size: 36px;
-  margin: 20px 0;
-  color: #4285f4; /* Google Blue */
-}
-
-/* Project container styling */
-.experience-details-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.details-container {
-  margin: 20px;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.color-container {
+  display: flex; /* Add this line to make items horizontal */
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
 }
 
 .project-img {
-  max-width: 100%;
-  border-radius: 8px;
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
 }
 
 .project-title {
-  font-size: 24px;
-  margin: 10px 0;
-  color: #333;
+  margin: 1rem;
+  color: black;
 }
 
-/* Button styling */
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  margin: 5px;
-  font-size: 16px;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 5px;
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
 }
 
-.btn-color-2 {
-  background-color: #4285f4; /* Google Blue */
-  color: #fff;
-}
-
-/* Arrow icon styling */
-.icon.arrow {
-  width: 30px;
-  height: 30px;
-  margin-top: 20px;
-  cursor: pointer;
-}
 
 /* ===== CONTACT =====*/
 .contact__input {
