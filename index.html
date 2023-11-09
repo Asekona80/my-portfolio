@@ -39,8 +39,7 @@
             <!--===== HOME =====-->
             <section class="home bd-grid" id="home">
                 <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Asekona Xanywa</span><br> Full stack Developer
-                         <br> App Developer</h1>
+                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Asekona Xanywa</span><br> Full stack Developer</h1>
 
                     <a href="#" class="button">Download CV</a>  
                     <a href="#" class="button">Contact</a>
@@ -227,16 +226,16 @@
             <!--CONTACT-->
             <section class="contact section" id="contact">
                 <h2 class="section-title">Contact</h2>
-        
+            
                 <div class="contact__container bd-grid">
-                    <form action="#" class="contact__form" id="contactForm">
-                        <input type="text" placeholder="Name" class="contact__input" id="name">
-                        <input type="email" placeholder="Email" class="contact__input" id="email">
-                        <textarea placeholder="Message" class="contact__input" id="message"></textarea>
-                        <input type="button" value="Submit" class="contact__button button" id="submitButton">
+                    <form action="process.php" method="post" class="contact__form" id="contactForm">
+                        <input type="text" placeholder="Name" class="contact__input" id="name" name="name">
+                        <input type="email" placeholder="Email" class="contact__input" id="email" name="email">
+                        <textarea placeholder="Message" class="contact__input" id="message" name="message"></textarea>
+                        <input type="submit" value="Submit" class="contact__button button" id="submitButton">
                     </form>
                 </div>
-            </section>
+            </section>           
         </main>
 
         <!--FOOTER-->
