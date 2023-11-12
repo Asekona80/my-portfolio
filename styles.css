@@ -234,11 +234,11 @@ img {
 
 .home__blob {
   fill: var(--first-color);
-  right: 10%;
 }
 
 .home__blob-img {
   width: 340px;
+  
 }
 
 /*BUTTONS*/
@@ -372,13 +372,16 @@ img {
 }
 
 .item-container {
-  max-width: 300px;
+  width: 300px; /* Set a fixed width */
+  height: 400px; /* Set a fixed height */
   background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px;
   transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
 }
 
 .item-container:hover {
@@ -388,10 +391,14 @@ img {
 .img-container img {
   width: 100%;
   height: auto;
+  border-bottom: 2px solid #333; /* Add a border to separate image and body */
 }
 
 .body-container {
+  flex-grow: 1; /* Allow the body to take remaining space */
   padding: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 .event-info {
@@ -422,11 +429,13 @@ img {
 
 .button-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between; /* Use space-between to add space between buttons */
   padding: 16px;
 }
 
 .action {
+  flex: 1; /* Make buttons take equal width */
+  margin: 0 8px; /* Add margin between buttons */
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
@@ -447,6 +456,13 @@ img {
 .action:hover {
   background-color: #555;
 }
+
+/* Additional CSS to place empty cards at the bottom */
+.item-container:nth-child(5),
+.item-container:nth-child(6) {
+  order: 2; /* Adjust the order as needed */
+}
+
 
 /* ===== CONTACT =====*/
 .contact__input {
