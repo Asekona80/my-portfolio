@@ -49,6 +49,12 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
+
+}
+/* Styles for night mode */
+body.dark-mode {
+  background-color: #333;
+  color: #f5f5f5;
 }
 
 h1, h2, p {
@@ -230,15 +236,22 @@ img {
   right: 0;
   bottom: 0;
   width: 260px;
+  margin-top: 10%;
+  height: auto;
 }
 
 .home__blob {
-  fill: var(--first-color);
+  fill:white;
 }
 
 .home__blob-img {
   width: 340px;
   
+}
+.home__img img {
+  width: 100%; /* Adjust the width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure it behaves as a block element */
 }
 
 /*BUTTONS*/
@@ -306,6 +319,7 @@ img {
 .skills__python,
 .skills__node,
 .skills__react,
+.skills__flutter,
 .skills__mysql {
   width: 49%; /* Adjust as needed */
 }
