@@ -366,116 +366,112 @@ img {
 .skills__container > div:first-child {
   order: 2; /* Order the first column to appear on the right */
 }
+/* ====Modal and work ====*/
 
+/* Styling for Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
-/* ===== WORK =====*/
-.work {
-  padding: 40px 0;
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
   text-align: center;
 }
 
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 20px;
+.close-modal-btn {
+  background-color:var(--second-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
 }
 
+.close-modal-btn:hover {
+  background-color: var(--second-color);
+}
+
+/* Styling for Cards Container */
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: flex; /* Display cards in a row */
+  flex-wrap: nowrap; /* Prevent cards from wrapping */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  padding-bottom: 20px; /* Add padding to handle scrollbar */
 }
 
+/* Styling for Individual Cards */
 .item-container {
-  width: 300px; /* Set a fixed width */
-  height: 400px; /* Set a fixed height */
-  background-color: #fff;
-  border-radius: 8px;
+  flex: 0 0 auto; /* Prevent flex-grow and flex-shrink */
+  width: 300px;
+  margin-right: 20px; /* Adjust space between cards */
+  border: 1px solid #ddd;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
   transition: transform 0.3s ease-in-out;
-  display: flex;
-  flex-direction: column;
 }
 
 .item-container:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+}
+
+.img-container {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
 }
 
 .img-container img {
   width: 100%;
   height: auto;
-  border-bottom: 2px solid #333; /* Add a border to separate image and body */
+  object-fit: cover;
 }
 
 .body-container {
-  flex-grow: 1; /* Allow the body to take remaining space */
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-}
-
-.event-info {
-  margin-bottom: 10px;
+  padding: 20px;
 }
 
 .title {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-}
-
-.separator {
-  width: 20px;
-  height: 2px;
-  background-color: #333;
-  margin: 8px auto;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--second-color);
 }
 
 .additional-info {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 10px;
-}
-
-.info {
-  font-size: 0.8rem;
-}
-
-.button-container {
-  display: flex;
-  justify-content: space-between; /* Use space-between to add space between buttons */
-  padding: 16px;
+  margin-bottom: 20px;
 }
 
 .action {
-  flex: 1; /* Make buttons take equal width */
-  margin: 0 8px; /* Add margin between buttons */
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  padding: 10px 20px;
+  background-color: var(--second-color);
   color: #fff;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.action:first-child {
-  background-color: #4CAF50;
-}
-
-.action:last-child {
-  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .action:hover {
-  background-color: #555;
+  background-color: var(--second-color);
 }
 
-/* Additional CSS to place empty cards at the bottom */
-.item-container:nth-child(5),
-.item-container:nth-child(6) {
-  order: 2; /* Adjust the order as needed */
-}
 
 
 /* ===== CONTACT =====*/

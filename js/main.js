@@ -116,3 +116,37 @@ const modeSwitch = document.getElementById('modeSwitch');
 modeSwitch.addEventListener('change', () => {
     document.body.classList.toggle('dark-mode');
 });
+
+// Adding a modal when a card is clicked
+const cards = document.querySelectorAll('.item-container');
+const modal = document.getElementById('modal');
+const modalContent = document.getElementById('modal-content');
+const closeModalBtn = document.getElementById('close-modal-btn');
+
+cards.forEach((card, index) => {
+    card.addEventListener('click', () => {
+        const title = card.querySelector('.title').textContent;
+        const description = card.querySelector('.description').textContent;
+
+        // Update modal content with card details
+        modalContent.innerHTML = `
+            <h3>${title}</h3>
+            <p>${description}</p>
+        `;
+
+        // Show the modal
+        modal.style.display = 'block';
+
+        // Close modal when close button is clicked
+        closeModalBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Close modal when clicking outside the modal content
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+});
