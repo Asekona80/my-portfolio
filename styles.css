@@ -416,9 +416,9 @@ img {
 
 /* Styling for Individual Cards */
 .item-container {
-  flex: 0 0 auto; /* Prevent flex-grow and flex-shrink */
+  flex: 0 0 auto; 
   width: 300px;
-  margin-right: 20px; /* Adjust space between cards */
+  margin-right: 20px; 
   border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
@@ -483,16 +483,16 @@ img {
 .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around; /* Align cards horizontally with space between */
-  gap: 20px; /* Adjust the gap between cards */
+  justify-content: space-around; 
+  gap: 20px; 
 }
 
 .item-container {
-  flex: 1 1 300px; /* Control the width of each card - adjust as needed */
-  max-width: 400px; /* Set a maximum width if necessary */
-  border: 1px solid #ccc; /* Optional: add borders for visual separation */
-  border-radius: 8px; /* Optional: add border radius for rounded corners */
-  overflow: hidden; /* Optional: hide overflowing content */
+  flex: 1 1 300px; 
+  max-width: 400px; 
+  border: 1px solid #ccc; 
+  border-radius: 8px; 
+  overflow: hidden;
 }
 
 .item-container img {
@@ -534,24 +534,49 @@ img {
 
 
 /* ===== CONTACT =====*/
-.contact__input {
-  width: 100%;
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-semi);
-  padding: 1rem;
-  border-radius: .5rem;
-  border: 1.5px solid var(--second-color);
-  outline: none;
-  margin-bottom: var(--mb-4);
+
+.contact {
+  background-color: #f9f9f9;
+  padding: 40px;
+  text-align: center;
 }
 
-.contact__button {
-  display: block;
-  border: none;
-  outline: none;
-  font-size: var(--normal-font-size);
-  cursor: pointer;
-  margin-left: auto;
+.section-title {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #333;
+}
+
+.contact-info {
+  margin-bottom: 30px;
+  text-align: left; /* Align text to the left */
+}
+
+.contact-info h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1.2em; /* Increase the font size */
+  display: block; /* Display the email link as a block element */
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.home__social {
+  margin-top: 20px;
+}
+
+.home__social-icon {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 24px;
+  color: #333;
 }
 
 /* ===== FOOTER =====*/
