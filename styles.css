@@ -472,7 +472,65 @@ img {
 .action:hover {
   background-color: var(--second-color);
 }
+.work {
+  padding: 40px 20px;
+}
 
+.section-title {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Align cards horizontally with space between */
+  gap: 20px; /* Adjust the gap between cards */
+}
+
+.item-container {
+  flex: 1 1 300px; /* Control the width of each card - adjust as needed */
+  max-width: 400px; /* Set a maximum width if necessary */
+  border: 1px solid #ccc; /* Optional: add borders for visual separation */
+  border-radius: 8px; /* Optional: add border radius for rounded corners */
+  overflow: hidden; /* Optional: hide overflowing content */
+}
+
+.item-container img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc; /* Optional: add a bottom border for the image */
+}
+
+.title {
+  text-align: center;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.separator {
+  height: 1px;
+  margin: 10px 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.action {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.action:hover {
+  background-color: #0056b3;
+}
 
 
 /* ===== CONTACT =====*/
