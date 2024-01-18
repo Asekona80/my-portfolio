@@ -154,10 +154,7 @@
             
 
             
-                    <div>
-                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
-                    </div>
-                </div>
+            
                 <section class="work section" id="work">
                     <h2 class="section-title">My Work</h2>
                     <div class="container">
@@ -213,21 +210,30 @@
                         </div>
                     </div>
                 </section>
-
-                
-       
             <!--CONTACT-->
             <section class="contact section" id="contact">
                 <h2 class="section-title">Contact</h2>
                 <div class="contact__container bd-grid">
-                <div class="contact-info">
-    <a href="mailto:Asekhonax@gmail.com">Asekhonax@gmail.com</a>  
-    <div class="home__social">
-        <a href="https://www.linkedin.com/in/asekona-xanywa-99b655200/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-        <a href="https://github.com/Asekona80?tab=repositories" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-    </div>
-</div>
-
+                    <form action="process_form.php" method="post" class="contact-form">
+                        <label for="name" class="contact-form-label">Name:</label>
+                        <input type="text" id="name" name="name" class="contact-form-input" required>
+        
+                        <label for="email" class="contact-form-label">Email:</label>
+                        <input type="email" id="email" name="email" class="contact-form-input" required>
+        
+                        <label for="message" class="contact-form-label">Message:</label>
+                        <textarea id="message" name="message" class="contact-form-textarea" required></textarea>
+        
+                        <button type="submit" class="contact-form-button">Submit</button>
+                    </form>
+        
+                    <div class="contact-info">
+                        <a href="mailto:Asekhonax@gmail.com">Asekhonax@gmail.com</a>  
+                        <div class="home__social">
+                            <a href="https://www.linkedin.com/in/asekona-xanywa-99b655200/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                            <a href="https://github.com/Asekona80?tab=repositories" class="home__social-icon"><i class='bx bxl-github'></i></a>
+                        </div>
+                    </div>
                 </div>
             </section>
                   
